@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <title>Pattanan Janthong | Frontend Developer</title>
+    <title>Pattanan Janthong | IT Support</title>
     <meta name="description"
-        content="Portfolio of Pattanan Janthong, a Freelance Frontend Developer with 3 years of experience.">
+        content="Portfolio of Pattanan Janthong, an IT Support professional supporting approximately 90 warehouse users, with experience in hardware, software, SQL, and web development.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -19,28 +19,31 @@
     <nav class="navbar">
         <div class="container nav-content">
             <a href="index.html" class="logo">Pattanan.</a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="primary-navigation">
                 <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Work</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button class="hamburger" type="button" aria-label="Open navigation" aria-controls="primary-navigation"
+                aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
         </div>
     </nav>
 
     <header id="hero" class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <span class="badge">Frontend Developer</span>
-                <h2>SOLVING PROBLEMS THROUGH <br><span class="gradient-text">CODE & HARDWARE.</span></h2>
-                <p>BRIDGE THE GAP BETWEEN HARDWARE PRECISION AND SOFTWARE CREATIVITY.</p>
+                <span class="badge">IT Support | Hardware &amp; Software</span>
+                <h1>SOLVING IT PROBLEMS. <br><span class="gradient-text">SUPPORTING PEOPLE.</span></h1>
+                <p lang="th">ดูแลผู้ใช้งาน แก้ไขปัญหา Hardware และ Software
+                    พร้อมทักษะ SQL และพัฒนาเว็บไซต์ เพื่อช่วยให้งานประจำวันดำเนินต่อได้อย่างราบรื่น</p>
                 <div class="cta-group">
                     <a href="#projects" class="btn btn-primary">View Work</a>
                     <a href="#contact" class="btn btn-secondary">Contact Me</a>
@@ -58,10 +61,14 @@
                     </div>
                     <div class="code-body">
                         <code>
-                            <span class="const">const</span> <span class="var">developer</span> = {<br>
+                            <span class="const">const</span> <span class="var">itSupport</span> = {<br>
                             &nbsp;&nbsp;name: <span class="string">'Pattanan'</span>,<br>
-                            &nbsp;&nbsp;exp: <span class="number">3</span>,<br>
-                            &nbsp;&nbsp;projects: <span class="number">10+</span><br>
+                            &nbsp;&nbsp;role: <span class="string">'IT Support'</span>,<br>
+                            &nbsp;&nbsp;users: <span class="string">'90–150+'</span>,<br>
+                            &nbsp;&nbsp;skills: [<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'Hardware'</span>, <span class="string">'Software'</span>,<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'SQL'</span>, <span class="string">'Web Dev'</span><br>
+                            &nbsp;&nbsp;]<br>
                             };
                         </code>
                     </div>
@@ -69,6 +76,34 @@
             </div>
         </div>
     </header>
+
+    <section id="about" class="section about">
+        <div class="container about-content">
+            <div class="about-text">
+                <h2 class="section-title">About Me</h2>
+                <p class="bio" lang="th">
+                    ผมมีพื้นฐานด้านช่างเทคนิคและสนใจงานคอมพิวเตอร์ทั้ง Hardware และ Software
+                    ปัจจุบันทำงานเป็น IT Support ประจำคลังสินค้า Watsons ดูแลผู้ใช้งานประมาณ 90 คน
+                    โดยให้ความช่วยเหลือด้านคอมพิวเตอร์ เครื่องพิมพ์ และเครื่องพิมพ์ฉลาก
+                    รวมถึงประสานงานกับผู้ให้บริการ เช่น HP, Fujifilm, Dell และ Lenovo เพื่อดำเนินการซ่อมอุปกรณ์
+                    นอกจากนี้ยังใช้ SQL ค้นหาข้อมูลคำสั่งซื้อและส่งออกข้อมูลการแพ็กสินค้าประจำวันให้แผนกที่เกี่ยวข้อง
+                </p>
+                <p class="bio" lang="th">
+                    ประสบการณ์จาก Advice และงาน Print Service Technician ที่ Double A
+                    ทำให้ผมมีทักษะในการวิเคราะห์อาการและซ่อมบำรุงอุปกรณ์ ตลอดจนการออกให้บริการหน้างาน
+                    ผมให้ความสำคัญกับการรับฟังปัญหา สื่อสารกับผู้ใช้งานให้เข้าใจง่าย
+                    และติดตามงานเพื่อให้ผู้ใช้งานกลับมาทำงานได้ตามปกติ
+                </p>
+                <p class="bio" lang="th">
+                    ผมยังมีพื้นฐานด้านระบบอัตโนมัติจากการฝึกงานที่ AUTO DIDACTIC
+                    ทั้งการประกอบและทดสอบชุดแขนกล รวมถึงการเขียน Ladder PLC
+                    และได้ศึกษาการพัฒนาเว็บไซต์จนมีโอกาสรับงาน Freelance
+                    ประสบการณ์เหล่านี้ช่วยเสริมการคิดอย่างเป็นระบบและการเรียนรู้เครื่องมือใหม่ ๆ
+                    เพื่อนำมาปรับใช้กับงาน IT Support
+                </p>
+            </div>
+        </div>
+    </section>
 
     <section id="education" class="section education">
         <div class="container">
@@ -78,7 +113,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <span class="date">2022 (2565)</span>
-                        <h3>High Vocational Certificate (ปวส.)</h3>
+                        <h3>High Vocational Certificate (<span lang="th">ปวส.</span>)</h3>
                         <p><strong>Uttaradit Technical College</strong></p>
                         <p>Major: Mechatronics and Robotics</p>
                         <p class="highlight">GPA: 3.35</p>
@@ -88,7 +123,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <span class="date">2020 (2563)</span>
-                        <h3>Vocational Certificate (ปวช.)</h3>
+                        <h3>Vocational Certificate (<span lang="th">ปวช.</span>)</h3>
                         <p><strong>Uttaradit Technical College</strong></p>
                         <p>Major: Electronics</p>
                         <p class="highlight">GPA: 3.33</p>
@@ -102,10 +137,19 @@
         <div class="container">
             <h2 class="section-title">Experience</h2>
             <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="date" lang="th">เมษายน 2026 - ปัจจุบัน</span>
+                        <h3>IT Support</h3>
+                        <p><strong>X-TREME SERVICE COMPANY LIMITED</strong></p>
+                        <p lang="th">ให้การสนับสนุนด้าน IT แก่ผู้ใช้งานประจำคลังสินค้า Watsons</p>
+                    </div>
+                </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <span class="date">2023 - 2026</span>
+                        <span class="date">2023 - 2025</span>
                         <h3>Freelance Frontend Developer</h3>
                         <p>Delivered over 10 successful projects ranging from corporate websites to interactive web
                             applications.</p>
@@ -120,28 +164,28 @@
                 <div class="timeline-item left">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <span class="date">พฤษภาคม 2025 - สิงหาคม 2025</span>
-                        <h3>print service technician</h3>
+                        <span class="date" lang="th">พฤษภาคม 2025 - สิงหาคม 2025</span>
+                        <h3>Print Service Technician</h3>
                         <p><strong>Double A</strong></p>
-                        <p>ซ่อมบำรุงเครื่องปริ้น และ PC ในโครงการ Fast print ของ Double A</p>
+                        <p lang="th">ดูแลและซ่อมบำรุงเครื่องพิมพ์และคอมพิวเตอร์ในโครงการ Fast Print ของ Double A</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <span class="date">ธันวาคม 2020 - กันยายน 2021</span>
-                        <h3>ช่างเทคนิค</h3>
+                        <span class="date" lang="th">ธันวาคม 2020 - กันยายน 2021</span>
+                        <h3 lang="th">ช่างเทคนิค</h3>
                         <p><strong>Auto Didactic CO.,LTD.</strong></p>
-                        <p>ประกอบชุดแขนกล และ หน้าที่ต่างๆ ที่ได้รับมอบหมาย</p>
+                        <p lang="th">ประกอบชุดแขนกลและปฏิบัติงานอื่นตามที่ได้รับมอบหมาย</p>
                     </div>
                 </div>
                 <div class="timeline-item left">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <span class="date">สิงหาคม 2019 - ธันวาคม 2019</span>
-                        <h3>ช่างเทคนิค</h3>
+                        <span class="date" lang="th">สิงหาคม 2019 - ธันวาคม 2019</span>
+                        <h3 lang="th">ช่างเทคนิค</h3>
                         <p><strong>Advice</strong></p>
-                        <p>ซ่อมบำรุง computer, laptop, printer</p>
+                        <p lang="th">ซ่อมบำรุงคอมพิวเตอร์ โน้ตบุ๊ก และเครื่องพิมพ์</p>
                     </div>
                 </div>
             </div>
@@ -152,6 +196,17 @@
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>IT Support</h3>
+                    <div class="skill-tags">
+                        <span>Hardware &amp; Software Troubleshooting</span>
+                        <span>PC &amp; Printer Maintenance</span>
+                        <span>Label Printer Support</span>
+                        <span>Software Installation</span>
+                        <span>User Support</span>
+                        <span>Vendor Coordination</span>
+                    </div>
+                </div>
                 <div class="skill-category">
                     <h3>Frontend</h3>
                     <div class="skill-tags">
@@ -178,6 +233,7 @@
                 <div class="skill-category">
                     <h3>Database</h3>
                     <div class="skill-tags">
+                        <span>SQL Queries &amp; Data Export</span>
                         <span>PostgreSQL</span>
                         <span>MySQL</span>
                         <span>MongoDB</span>
@@ -206,23 +262,6 @@
                         <span>English: 33 WPM <strong>(Colemak)</strong></span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="section about">
-        <div class="container about-content">
-            <div class="about-text">
-                <h2 class="section-title">About Me</h2>
-                <p class="bio">
-                    จากช่างเทคนิคที่ชอบการปรับจูน Hardware สู่การเป็น Web Developer ที่ชอบสร้างระบบที่ใช้งานได้จริง
-                    ผมมีประสบการณ์พัฒนาโปรเจกต์ที่ต้องรับมือกับ Data จำนวนมากและการทำงานแบบ Real-time มามากกว่า 5
-                    โปรเจกต์<br>
-
-                    ผมให้ความสำคัญกับเรื่อง Performance และ Efficiency เป็นอันดับหนึ่ง ไม่ว่าจะเป็นการเขียน Code
-                    ที่สะอาด หรือการเลือกใช้เครื่องมือที่ช่วยให้ทำงานได้เร็วขึ้น ผมพร้อมที่จะเรียนรู้เทคโนโลยีใหม่ๆ
-                    และนำทักษะการวิเคราะห์ปัญหาจากงานช่างมาปรับใช้กับการพัฒนาซอฟต์แวร์ครับ
-                </p>
             </div>
         </div>
     </section>
@@ -265,15 +304,14 @@
                             <span>PostgreSQL</span>
                             <span>Elementor</span>
                         </div>
-                        <a href="#" onclick="alert('Link available upon request (Private Project)'); return false;"
-                            class="project-link">View Project &rarr;</a>
+                        <a href="#contact" class="project-link">Request Project Details &rarr;</a>
                     </div>
                 </article>
 
                 <!-- Project 3 -->
                 <article class="project-card">
                     <div class="project-image gradient-3">
-                        <img src="assets/tiktok.png" alt="Lockngoth Project Preview"
+                        <img src="assets/tiktok.png" alt="TikTok Video Editing Project Preview"
                             style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
                     </div>
                     <div class="project-info">
@@ -291,7 +329,7 @@
                 <!-- Project 4 -->
                 <article class="project-card">
                     <div class="project-image gradient-3">
-                        <img src="assets/youtube.png" alt="Lockngoth Project Preview"
+                        <img src="assets/youtube.png" alt="Arch Linux Virtualization Project Preview"
                             style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
                     </div>
                     <div class="project-info">

@@ -1,12 +1,52 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const menuToggle = document.querySelector('.hamburger');
+    const navigation = document.getElementById('primary-navigation');
+
+    if (menuToggle && navigation) {
+        const setMenuOpen = (open) => {
+            menuToggle.setAttribute('aria-expanded', String(open));
+            menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+            navigation.classList.toggle('is-open', open);
+        };
+
+        menuToggle.addEventListener('click', () => {
+            setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
+        });
+
+        navigation.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => setMenuOpen(false));
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+                setMenuOpen(false);
+                menuToggle.focus();
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!navigation.contains(event.target) && !menuToggle.contains(event.target)) {
+                setMenuOpen(false);
+            }
+        });
+
+        window.matchMedia('(max-width: 768px)').addEventListener('change', () => setMenuOpen(false));
+    }
+
     // Smooth Scrolling for Anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            if (!href || href === '#') {
+                e.preventDefault();
+                return;
+            }
+            const target = document.getElementById(href.slice(1));
             if (target) {
+                e.preventDefault();
                 target.scrollIntoView({
-                    behavior: 'smooth'
+                    behavior: reducedMotion.matches ? 'instant' : 'smooth'
                 });
             }
         });
@@ -31,28 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // Basic Form Handling (Prevent actual submission)
-    const form = document.querySelector('.contact-form');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button');
-            const originalText = btn.innerText;
-
-            btn.innerText = 'Sending...';
-
-            setTimeout(() => {
-                btn.innerText = 'Message Sent!';
-                btn.style.background = '#27c93f'; // Success Green
-                form.reset();
-
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.style.background = ''; // Revert to gradient
-                }, 3000);
-            }, 1500);
-        });
-    }
     // Back to Top Button
     const backToTopBtn = document.getElementById('back-to-top');
     if (backToTopBtn) {
@@ -65,22 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
         });
     }
 });
-
-// Add fade-in styles dynamically
-const style = document.createElement('style');
-style.innerHTML = `
-    .fade-in-section {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .fade-in-section.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-`;
-document.head.appendChild(style);
